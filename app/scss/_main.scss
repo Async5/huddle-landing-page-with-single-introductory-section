@@ -1,0 +1,128 @@
+.main {
+  min-height: 100vh;
+  background-image: url('../../app/images/bg-mobile.svg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+
+  @media screen and (min-width: 62.5rem) {
+    background-image: url('../../app/images/bg-desktop.svg');
+    background-position: center center;
+    background-size: cover;
+  }
+
+  header {
+    height: 6.25rem;
+    @media screen and (min-width: 62.5rem) {
+      height: 25vh;
+    }
+
+    display: flex;
+    align-items: center;
+
+    h1 {
+      width: 8.125rem;
+      height: 1.875rem;
+
+      width: 12.5rem;
+      height: 2.5rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__flex {
+    @media screen and (min-width: 62.5rem) {
+      display: flex;
+    }
+  }
+
+  &__image,
+  &__content {
+    @media screen and (min-width: 62.5rem) {
+      flex: 1;
+    }
+  }
+
+  &__image {
+    margin-top: 1.375rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__content {
+    margin-top: 4.0625rem;
+    text-align: center;
+    color: white;
+
+    @media screen and (min-width: 62.5rem) {
+      text-align: left;
+      padding-left: 2.75rem;
+    }
+
+    h2 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 1.4375rem;
+
+      @media screen and (min-width: 62.5rem) {
+        font-size: 3rem;
+      }
+    }
+
+    p {
+      margin-top: 1.25rem;
+      line-height: 155%;
+
+      @media screen and (min-width: 62.5rem) {
+        font-size: 1.25rem;
+      }
+    }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+
+      @media screen and (min-width: 62.5rem) {
+        position: absolute;
+        right: 7.5%;
+        bottom: 3%;
+      }
+
+      margin-top: 2.5rem;
+      padding: 0.625rem 0rem;
+
+      .flex {
+        display: flex;
+      }
+
+      &__icon {
+        display: inline-block;
+        width: 1.875rem;
+        height: 1.875rem;
+        border: 1px solid white;
+        border-radius: 50%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:not(:last-child) {
+          margin-right: 0.625rem;
+        }
+
+        &:hover {
+          border-color: $soft-magenta;
+          color: $soft-magenta;
+        }
+      }
+    }
+  }
+}
